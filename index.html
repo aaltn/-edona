@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body class="no-js">
   <div class="wraper">
 
     <header class="main-header">
@@ -22,7 +22,7 @@
             <!-- </a> -->
           </li>
           <li class="active"><a href="index.html#map-canvas">Карта штата</a></li>
-          <li><a href="hotel.html">Гостиницы</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -45,7 +45,7 @@
             <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <div class="reason-picture">
-            <img src="img/real-city.jpg" width="800" height="400" alt="real-city">
+            <img src="img/sedona-city.jpg" width="800" height="400" alt="Sedona city">
           </div>
         </div>
         <!-- 2 -->
@@ -71,7 +71,7 @@
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
           <div class="reason-picture">
-            <img src="img/real-city.jpg" width="800" height="400" alt="real-city">
+            <img src="img/devil-bridge.jpg" width="800" height="400" alt="devil's bridge">
           </div>
         </div>
         <!-- 4 -->
@@ -96,9 +96,30 @@
       <section class="search">
         <h2 class="search-title">Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button>Поиск гостиницы в седоне</button>
-        <form class="search-form" action="index.html" method="post">
-
+        <button>Поиск гостиницы в Cедоне</button>
+        <!-- если нет js - то форма поиска показывается -->
+        <form class="search-form modal-show" action="index.html" method="post">
+          <div class="">
+            <label for="arrival">Дата заезда:</label>
+            <input id="arrival" type="text" name="arrival-date" value="24 Апреля 2017">
+            <button class="calendar-button" type="button">календарь</button>
+          </div>
+          <div class="">
+            <label for="leaving">Дата выезда:</label>
+            <input id="leaving" type="text" name="leaving-date" value="4 июля 2017">
+            <button class="calendar-button" type="button">календарь</button>
+          </div>
+          <div class="">
+            <label for="adults">Взрослые:</label>
+            <button class="step-button minus-step-button" type="button">-</button>
+            <input id="adults" type="text" name="adults" value="2">
+            <button class="step-button plus-step-button" type="button">+</button>
+            <label for="children">Дети:</label>
+            <button class="step-button minus-step-button" type="button">-</button>
+            <input id="children" type="text" name="adults" value="0">
+            <button class="step-button plus-step-button" type="button">+</button>
+          </div>
+          <button type="submit">Найти</button>
         </form>
       </section>
       <div id="map-canvas">Карта</div>
@@ -110,14 +131,14 @@
         <a href="#">#VisitSedona</a>
       </div>
       <div class="footer-social">
-        <a href="#" class="btn-social btn-social-twiter"></a>
-        <a href="#" class="btn-social btn-social-fb"></a>
-        <a href="#" class="btn-social btn-social-youtube"></a>
+        <a href="#" class="social-btn social-btn-twiter">Твитер</a>
+        <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
+        <a href="#" class="social-btn social-btn-youtube">Ютуб</a>
       </div>
       <div class="footer-banner">
         Website by
         <a href="">
-          <img src="" alt="">
+          <img src="img\html-academy.png" width="199" height="68" alt="HTML Academy">
         </a>
       </div>
     </footer>
