@@ -22,7 +22,7 @@
             <img src="img/index-logo2.png" width="138" height="70" alt="Sedona logo">
             <!-- </a> -->
           </li>
-          <li class="active"><a href="index.html#map-canvas">Карта штата</a></li>
+          <li><a href="index.html#map-canvas">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
@@ -35,12 +35,12 @@
       </div>
       <section class="reasons">
         <div class="reasons-header">
-          <h1>Седона &mdash; небольшой городок в Аризоне, <br>заслуживающий большего!</h1>
+          <h1>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
         <!-- 1 -->
-        <div class="reason-description">
-          <div class="reason highlight">
+        <div class="reason-description highlight">
+          <div class="reason">
             <h2 class="reason-title">Настоящий городок</h2>
             <div class="reason-number">— №1 —</div>
             <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
@@ -53,20 +53,20 @@
         <div class="reason-description reason-icon">
           <div class="reason reason-icon-hotel">
             <h2 class="reason-title">Жилье</h2>
-            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            <p>Рекомендуем пожить в настоящем мотеле, все&nbsp;как&nbsp;в кино!</p>
           </div>
           <div class="reason reason-icon-food">
             <h2 class="reason-title">Еда</h2>
-            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <p>Всегда заказывайте фирменный&nbsp;бургер, вы&nbsp;не&nbsp;разочаруетесь!</p>
           </div>
           <div class="reason reason-icon-gift">
             <h2 class="reason-title">Сувениры</h2>
-            <p>Не только китайского, <br>но и местного производства!</p>
+            <p>Не только китайского,<br>но и местного производства!</p>
           </div>
         </div>
         <!-- 3 -->
-        <div class="reason-description">
-          <div class="reason highlight rihgt">
+        <div class="reason-description highlight">
+          <div class="reason rihgt">
             <h2 class="reason-title">Там есть мост&nbsp;дьявола</h2>
             <div class="reason-number">— №2 —</div>
             <p>Да, по нему можно пройти! Если&nbsp;конечно вы осмелитесь</p>
@@ -76,21 +76,21 @@
           </div>
         </div>
         <!-- 4 -->
-        <div class="reason-description">
+        <div class="reason-description highlight-grey">
           <div class="reason">
             <h2 class="reason-title">Небольшая площадь</h2>
             <div class="reason-number">— №3 —</div>
-            <p>Все достопримечательности находятся очень близко</p>
+            <p>Все достопримеча&shy;тельности находятся очень близко</p>
           </div>
           <div class="reason">
             <h2 class="reason-title">Красивая дорога</h2>
             <div class="reason-number">— №4 —</div>
-            <p>Ехать в Седону из Лас-вегаса совсем не&nbsp;скучно!</p>
+            <p>Ехать в Седону из Лас&#8209;Вегаса совсем не&nbsp;скучно!</p>
           </div>
           <div class="reason">
             <h2 class="reason-title">Мало туристов</h2>
             <div class="reason-number">— №5 —</div>
-            <p>Большинство едет в Гранд Каньон&nbsp;и толпится там</p>
+            <p>Большинство едет в Гранд&nbsp;Каньон и толпится&nbsp;там</p>
           </div>
         </div>
       </section>
@@ -99,28 +99,32 @@
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button class="btn">Поиск гостиницы в Cедоне</button>
         <!-- если нет js - то форма поиска показывается сразу -->
-        <form class="search-form modal-show" action="index.html" method="post">
+        <form class="search-form modal-show" action="hotels.html" method="post">
           <div class="search-form-row">
             <label for="arrival">Дата заезда:</label>
-            <input id="arrival" type="text" name="arrival-date" value="24 Апреля 2017">
+            <input id="arrival" type="text" name="arrival-date" maxlength="20" value="24 Апреля 2017">
             <button class="calendar-button" type="button">календарь</button>
           </div>
           <div class="search-form-row">
             <label for="leaving">Дата выезда:</label>
-            <input id="leaving" type="text" name="leaving-date" value="4 июля 2017">
+            <input id="leaving" type="text" name="leaving-date" maxlength="20" value="4 июля 2017">
             <button class="calendar-button" type="button">календарь</button>
           </div>
-          <div class="search-form-row">
-            <label for="adults">Взрослые:</label>
-            <button class="step-button minus-step-button" type="button">-</button>
-            <input id="adults" type="text" name="adults" value="2">
-            <button class="step-button plus-step-button" type="button">+</button>
-            <label for="children">Дети:</label>
-            <button class="step-button minus-step-button" type="button">-</button>
-            <input id="children" type="text" name="adults" value="0">
-            <button class="step-button plus-step-button" type="button">+</button>
+          <div class="search-form-row clearfix">
+            <div class="search-form-col left">
+              <label for="adults">Взрослые:</label>
+              <button class="step-button plus-step-button" type="button">+</button>
+              <input id="adults" type="text" name="adults" maxlength="2" value="2">
+              <button class="step-button minus-step-button" type="button">–</button>
+            </div>
+            <div class="search-form-col rihgt">
+              <label for="children">Дети:</label>
+              <button class="step-button plus-step-button" type="button">+</button>
+              <input id="children" type="text" name="adults" maxlength="2" value="0">
+              <button class="step-button minus-step-button" type="button">–</button>
+            </div>
           </div>
-          <button type="submit">Найти</button>
+          <button class="btn highlight" type="submit">Найти</button>
         </form>
       </section>
       <div id="map-canvas"></div>
