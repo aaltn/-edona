@@ -30,7 +30,7 @@
 
     <main>
       <section class="filter">
-        <form class="hotel-filter" action="index.html" method="post">
+        <form class="hotel-filter" action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend>Инфраструктура:</legend>
             <label  class="check-label">
@@ -69,40 +69,38 @@
             </label>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="price-block">
           <legend>Стоимость в сутки (Р):</legend>
           <!-- <div class="mim-price"></div>   -->
           <!-- <div class="max-price"></div> -->
-          <label>
-            от
-            <input type="text" name="min-price" value="0">
-          </label>
-          <label>
-            до
-            <input type="text" name="max-price" value="3000">
-          </label>
-          <div class="price-filter">
+          <div class="price-value">
+            <label for="min-price">от </label>
+            <input id="min-price" type="text" name="min-price" value="0">
+            <label for="max-price">до </label>
+            <input id="max-price" type="text" name="max-price" value="3000">
+          </div>
+          <div class="range-controls">
             <div class="progress-bar">
-              <div class="left-slider"></div>
-              <div class="right-slider"></div>
+              <div class="left-controls"></div>
+              <div class="right-controls"></div>
               <div class="bar"></div>
             </div>
           </div>
-          <button class="btn" type="submint" name="button">Показать</button>
+          <button class="btn" type="submint">Показать</button>
         </fieldset>
 
         </form>
       </section>
 
       <section class="sort">
-        <h2 class="sort-title">Найденно: <span class="sort-result">3</span></h2>
+        <h2 class="sort-title">Найдено: <span class="sort-result">3</span></h2>
         <ul>
           <li><span>Сортировка:</span></li>
           <li class="curent"><a href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По рейтенгу</a></li>
-          <li class="curent"><a href="#" title="По убыванию"><span class="sort descending">По убыванию</span></a></li>
-          <li><a href="#" title="По возрастанию"><span class="sort ascending">По возрастанию</span></a></li>
+          <li class="curent"><a href="#" title="По убыванию"><span class="sort-btn descending">По убыванию</span></a></li>
+          <li><a href="#" title="По возрастанию"><span class="sort-btn ascending">По возрастанию</span></a></li>
         </ul>
       </section>
       <section class="search-result">
